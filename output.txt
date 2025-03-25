@@ -1,0 +1,114 @@
+Terraform will perform the following actions:
+
+  # module.google_compute_instance[0].google_compute_instance_from_machine_image.tpl will be created
+  + resource "google_compute_instance_from_machine_image" "tpl" {
+      + allow_stopping_for_update = (known after apply)
+      + attached_disk             = (known after apply)
+      + boot_disk                 = (known after apply)
+      + can_ip_forward            = (known after apply)
+      + cpu_platform              = (known after apply)
+      + current_status            = (known after apply)
+      + deletion_protection       = (known after apply)
+      + description               = (known after apply)
+      + desired_status            = (known after apply)
+      + effective_labels          = {
+          + "my_key" = "my_value"
+        }
+      + enable_display            = (known after apply)
+      + guest_accelerator         = (known after apply)
+      + hostname                  = (known after apply)
+      + id                        = (known after apply)
+      + instance_id               = (known after apply)
+      + label_fingerprint         = (known after apply)
+      + labels                    = {
+          + "my_key" = "my_value"
+        }
+      + machine_type              = "e2-medium"
+      + metadata                  = (known after apply)
+      + metadata_fingerprint      = (known after apply)
+      + metadata_startup_script   = (known after apply)
+      + min_cpu_platform          = (known after apply)
+      + name                      = "dev10-app"
+      + project                   = "my-project-id"
+      + resource_policies         = (known after apply)
+      + scratch_disk              = (known after apply)
+      + self_link                 = (known after apply)
+      + service_account           = (known after apply)
+      + source_machine_image      = "dev1-app-image"
+      + tags                      = (known after apply)
+      + tags_fingerprint          = (known after apply)
+      + terraform_labels          = {
+          + "my_key" = "my_value"
+        }
+      + zone                      = "us-east1"
+    }
+
+  # module.google_compute_instance[0].google_compute_machine_image.image will be created
+  + resource "google_compute_machine_image" "image" {
+      + id                = (known after apply)
+      + name              = "dev1-app-image"
+      + project           = "my-project-id"
+      + self_link         = (known after apply)
+      + source_instance   = "dev1-app"
+      + storage_locations = (known after apply)
+    }
+
+  # module.google_compute_instance[1].google_compute_instance_from_machine_image.tpl will be created
+  + resource "google_compute_instance_from_machine_image" "tpl" {
+      + allow_stopping_for_update = (known after apply)
+      + attached_disk             = (known after apply)
+      + boot_disk                 = (known after apply)
+      + can_ip_forward            = (known after apply)
+      + cpu_platform              = (known after apply)
+      + current_status            = (known after apply)
+      + deletion_protection       = (known after apply)
+      + description               = (known after apply)
+      + desired_status            = (known after apply)
+      + effective_labels          = {
+          + "my_key" = "my_value"
+        }
+      + enable_display            = (known after apply)
+      + guest_accelerator         = (known after apply)
+      + hostname                  = (known after apply)
+      + id                        = (known after apply)
+      + instance_id               = (known after apply)
+      + label_fingerprint         = (known after apply)
+      + labels                    = {
+          + "my_key" = "my_value"
+        }
+      + machine_type              = "e2-medium"
+      + metadata                  = (known after apply)
+      + metadata_fingerprint      = (known after apply)
+      + metadata_startup_script   = (known after apply)
+      + min_cpu_platform          = (known after apply)
+      + name                      = "dev10-backend"
+      + project                   = "my-project-id"
+      + resource_policies         = (known after apply)
+      + scratch_disk              = (known after apply)
+      + self_link                 = (known after apply)
+      + service_account           = (known after apply)
+      + source_machine_image      = "dev1-backend-image"
+      + tags                      = (known after apply)
+      + tags_fingerprint          = (known after apply)
+      + terraform_labels          = {
+          + "my_key" = "my_value"
+        }
+      + zone                      = "us-east1"
+    }
+
+  # module.google_compute_instance[1].google_compute_machine_image.image will be created
+  + resource "google_compute_machine_image" "image" {
+      + id                = (known after apply)
+      + name              = "dev1-backend-image"
+      + project           = "my-project-id"
+      + self_link         = (known after apply)
+      + source_instance   = "dev1-backend"
+      + storage_locations = (known after apply)
+    }
+
+Plan: 4 to add, 0 to change, 0 to destroy.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if
+you run "terraform apply" now.
